@@ -31,6 +31,7 @@ public class ProcessadorBoletosTest {
 		processador.addBoletos(boleto);
 		Assertions.assertEquals(1, processador.getBoletos().size());
 	}
+	
 	@Test
 	public void faturaPagaParaValoresIguaisSemBoleto() {
 		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);

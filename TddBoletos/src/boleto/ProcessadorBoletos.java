@@ -19,10 +19,10 @@ public class ProcessadorBoletos {
 	
 	public boolean faturaPaga() {
 		
-		
-		return false;
-		
-		
+		if(getBoletos().size()==0) {
+			return false;
+		}
+		return getBoletos().get(0).getValor() == getFatura().getValor() ;
 	}
 	
 	
