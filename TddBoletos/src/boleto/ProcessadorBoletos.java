@@ -11,7 +11,7 @@ public class ProcessadorBoletos {
 	fatura fatura ;
 	
 	public ProcessadorBoletos(fatura fatura) {
-		
+		setFatura(fatura);
 	}
 	
 	public fatura getFatura() {
