@@ -32,11 +32,11 @@ public class ProcessadorBoletosTest {
 		Assertions.assertEquals(1, processador.getBoletos().size());
 	}
 	@Test
-	public void faturaPagaParaValoresIguaissemBoleto() {
+	public void faturaPagaParaValoresIguaisSemBoleto() {
 		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);
 		Boleto boleto = new Boleto(1,"10/11/1999",2000);
 		processador.addBoletos(boleto);
-		Assertions.assertEquals(true, processador.faturaPaga());
+		Assertions.assertEquals(false, processador.faturaPaga());
 	}
 	/*@Test
 	public void faturaPagaParaValoresIguaisComUmBoleto() {

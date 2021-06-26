@@ -18,7 +18,7 @@ public class ProcessadorBoletos {
 	}
 	
 	public boolean faturaPaga() {
-		return (Boolean)null;
+		return false;
 	}
 	
 	
