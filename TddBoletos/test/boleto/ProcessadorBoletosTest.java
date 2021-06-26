@@ -3,16 +3,32 @@ package boleto;
 
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import fatura.fatura;
 
 public class ProcessadorBoletosTest {
+	private fatura fatura;
+	
+	@BeforeEach
+	public  void inicializador() {
+		fatura = new fatura("10/10/2000",2000,"Gabriel");
+	}
 	
 	@Test
 	public void construtor() {
-		fatura fatura = new fatura("10/10/2000",2000,"Gabriel");
 		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);
 		Assertions.assertEquals(fatura, processador.getFatura());
 	}
+	
+	@Test
+	public void addBoleto() {
+		
+		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);
+		Boleto boleto = new Boleto(1,"10/11/1999",30);
+		Assertions.assertEquals(true, processador.addBoletos(boleto));
+	}
+	
+	
 }

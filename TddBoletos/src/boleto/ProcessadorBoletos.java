@@ -13,6 +13,10 @@ public class ProcessadorBoletos {
 	public ProcessadorBoletos(fatura fatura) {
 		setFatura(fatura);
 	}
+	public boolean addBoletos(Boleto boleto) {
+		return (Boolean) null;
+	}
+	
 	
 	public fatura getFatura() {
 		return fatura;
@@ -21,5 +25,7 @@ public class ProcessadorBoletos {
 	public void setFatura(fatura fatura) {
 		this.fatura = fatura;
 	}
+	
+	
 	
 }
