@@ -17,6 +17,10 @@ public class ProcessadorBoletos {
 		getBoletos().add(boleto);
 	}
 	
+	public boolean faturaPaga() {
+		return (Boolean)null;
+	}
+	
 	
 	public fatura getFatura() {
 		return fatura;
