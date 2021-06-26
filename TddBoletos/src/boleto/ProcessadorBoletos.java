@@ -14,6 +14,7 @@ public class ProcessadorBoletos {
 		setFatura(fatura);
 	}
 	public void addBoletos(Boleto boleto) {
+		getBoletos().add(boleto);
 	}
 	
 	
