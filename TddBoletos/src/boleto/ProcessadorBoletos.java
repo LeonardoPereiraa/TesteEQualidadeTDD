@@ -26,7 +26,7 @@ public class ProcessadorBoletos {
 		for (int i=0; i<numeroBoletos; i++) {
 			ValorTotal = ValorTotal + getBoletos().get(i).getValor();
 		    }
-		return ValorTotal == getFatura().getValor() ;
+		return ValorTotal >= getFatura().getValor() ;
 	}
 	
 	
