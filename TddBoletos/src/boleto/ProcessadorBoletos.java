@@ -18,11 +18,15 @@ public class ProcessadorBoletos {
 	}
 	
 	public boolean faturaPaga() {
-		
-		if(getBoletos().size()==0) {
+		int numeroBoletos = getBoletos().size(); 
+		if(numeroBoletos==0) {
 			return false;
 		}
-		return getBoletos().get(0).getValor() == getFatura().getValor() ;
+		float ValorTotal=0;	
+		for (int i=0; i<numeroBoletos; i++) {
+			ValorTotal = ValorTotal + getBoletos().get(i).getValor();
+		    }
+		return ValorTotal == getFatura().getValor() ;
 	}
 	
 	
