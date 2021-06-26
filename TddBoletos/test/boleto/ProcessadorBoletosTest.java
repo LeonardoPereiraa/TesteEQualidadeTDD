@@ -2,6 +2,8 @@ package boleto;
 
 
 
+
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -24,10 +26,10 @@ public class ProcessadorBoletosTest {
 	
 	@Test
 	public void addBoleto() {
-		
 		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);
 		Boleto boleto = new Boleto(1,"10/11/1999",30);
-		Assertions.assertEquals(true, processador.addBoletos(boleto));
+		processador.addBoletos(boleto);
+		Assertions.assertEquals(1, processador.getBoletos().size());
 	}
 	
 	
