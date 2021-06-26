@@ -55,5 +55,16 @@ public class ProcessadorBoletosTest {
 		processador.addBoletos(boleto3);
 		Assertions.assertEquals(true, processador.faturaPaga());
 	}
+	@Test
+	public void faturaPagaParaValoresMaioresNoBoleto() {
+		ProcessadorBoletos processador = new ProcessadorBoletos(fatura);
+		Boleto boleto1 = new Boleto(1,"10/11/1999",1000);
+		Boleto boleto2 = new Boleto(1,"10/11/1999",1000);
+		Boleto boleto3 = new Boleto(1,"10/11/1999",500);
+		processador.addBoletos(boleto1);
+		processador.addBoletos(boleto2);
+		processador.addBoletos(boleto3);
+		Assertions.assertEquals(true, processador.faturaPaga());
+	}
 	
 }
